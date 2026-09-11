@@ -1,35 +1,15 @@
-<form method="POST" action="">
-    <label for="num">Number of Star: </label>
-    <input type="text" id="num" name="num" min="1" required>
-    <button type="submit">Go</button>
-</form>
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz Menu</title>
+</head>
+<body>
+    <h2> Quiz</h2>
 
-<?php
-if (isset($_POST['num'])) {
-    $num = (int)$_POST['num'];
-    
-    echo "<br>";
-
-echo "<pre>";
-if ($num % 2 == 0) {
-    //เลขคู่ => ปกติ
-    for ($i = 1; $i <= $num; $i++) {
-        for ($k = 1; $k <= $i; $k++) {
-            echo "*";
-        }
-        echo "\n";
-    }
-} else {
-    //เลขคี่ => กลับหัว 
-    for ($i = $num; $i >= 1; $i--) {
-        for ($k = 1; $k <= $i; $k++) {
-            echo "*";
-        }
-        echo "\n";
-    }
-}
-    
-    }
-
-
-?>
+    <a href="quiz1.php"><button>Quiz 1</button></a><br><br>
+    <a href="quiz2.php"><button>Quiz 2</button></a><br><br>
+    <a href="quiz3.php"><button>Quiz 3</button></a><br><br>
+    <a href="quiz4.php"><button>Quiz 4</button></a>
+</body>
+</html>
